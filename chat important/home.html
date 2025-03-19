@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm Sorry</title>
     <style>
-        /* Overall page styling */
+        /* Background styling */
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: #f0f4f7; /* Subtle light grey for a modern feel */
+            background: linear-gradient(to bottom right, #ffdde1, #ee9ca7); /* Soft pink gradient */
             color: #333;
             padding: 50px;
             margin: 0;
@@ -20,7 +20,15 @@
             font-size: 3em;
             color: #ff6f61;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease; /* Add a fade-in effect */
+        }
+    
+        h2 {
+            font-size: 2em;
+            color: #ff6f61;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            animation: pulse 1.5s infinite; /* Pulsing animation for emphasis */
         }
     
         /* Paragraph styling */
@@ -28,28 +36,71 @@
             font-size: 1.2em;
             line-height: 1.6;
             margin-bottom: 30px;
-            color: #555; /* Softer text color for readability */
+            color: #555;
+            animation: slideIn 2s ease-out;
         }
     
         /* Button styling */
         button {
-            padding: 12px 25px;
+            padding: 12px 30px;
             background-color: #ff6f61;
             color: white;
             border: none;
-            border-radius: 25px; /* Rounded button for a modern look */
-            font-size: 1em;
+            border-radius: 25px;
+            font-size: 1.2em;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease; /* Smooth transition for hover effect */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow for depth */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: popIn 1.5s ease;
         }
     
         /* Button hover effect */
         button:hover {
-            background-color: #e65548; /* Darker shade on hover */
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-            transform: translateY(-2px); /* Lift effect */
+            background-color: #e65548;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+    
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
     
         /* Mobile responsiveness */
@@ -58,17 +109,21 @@
                 padding: 20px;
             }
             h1 {
-                font-size: 2.5em; /* Adjust heading size on smaller screens */
+                font-size: 2.5em;
+            }
+            h2 {
+                font-size: 1.5em;
             }
             p {
-                font-size: 1em; /* Reduce paragraph size for better readability */
+                font-size: 1em;
             }
             button {
-                font-size: 0.9em; /* Slightly smaller button text */
+                font-size: 1em;
                 padding: 10px 20px;
             }
         }
     </style>
+    
     
 </head>
 <body>
