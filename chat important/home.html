@@ -5,33 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm Sorry</title>
     <style>
+        /* Overall page styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: #f8f9fa;
+            background-color: #f0f4f7; /* Subtle light grey for a modern feel */
             color: #333;
             padding: 50px;
+            margin: 0;
         }
+    
+        /* Header styling */
         h1 {
             font-size: 3em;
             color: #ff6f61;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
         }
+    
+        /* Paragraph styling */
         p {
             font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555; /* Softer text color for readability */
         }
+    
+        /* Button styling */
         button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: #ff6f61;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px; /* Rounded button for a modern look */
             font-size: 1em;
+            font-weight: bold;
             cursor: pointer;
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow for depth */
         }
+    
+        /* Button hover effect */
         button:hover {
-            background-color: #ff3d2e;
+            background-color: #e65548; /* Darker shade on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+            transform: translateY(-2px); /* Lift effect */
+        }
+    
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.5em; /* Adjust heading size on smaller screens */
+            }
+            p {
+                font-size: 1em; /* Reduce paragraph size for better readability */
+            }
+            button {
+                font-size: 0.9em; /* Slightly smaller button text */
+                padding: 10px 20px;
+            }
         }
     </style>
+    
 </head>
 <body>
     <h1>I'm Sorry 😔</h1>
